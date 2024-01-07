@@ -1,44 +1,43 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
-const footer = (
-	<h2>
-		Hello, Lori Smith
-	</h2>
-);
+class App extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { count: 0 };
+	}
 
-const header = (<header className="App-header">
-	<img src={logo} className="App-logo" alt="logo" />
-	<p>Hello, John</p>
-	<a
-		className="App-link"
-		href="https://reactjs.org"
-		target="_blank"
-		rel="noopener noreferrer"
-	>
-		Learn React
-	</a>
-</header>);
+	//componentDidMount() - это функция для конкретного компонента, которая вызывается после загрузки компонента, для изменения значения объекта state 
+	componentDidMount() {
+		this.setState(
+			//Обновление значения
+			{ count: 1 }
+		);
+	}
+	//Метод обновления - updateCount 
+	updateCount = () => {
+		this.setState({
+			count: this.state.count + 1
+		});
+	}
 
-const name = "Viktory";
-
-function App() {
-	return (
-		<div className="App">
-
-
-			{header}
-			<div className="block">
-				My first JSX {name}
+	render() {
+		return (
+			<div className="App">
+				<div>
+					<h1 className="title">Hello</h1>
+					{/* Связываем кнопку с методом */}
+					<button onClick={this.updateCount} className="button">Click me</button>
+					{/* this.state - это объект JavaScript , который позволяет отслеживать и использовать несколько значений,this.state.count внутри render() и отображение его текущего значения  */}
+					<p className="text">Count: {this.state.count}</p>
+				</div>
 			</div>
-			{footer}
-
-
-			
-		</div>
-	);
+		);
+	}
 }
 
 export default App;
+
 
 //npm start - запуск
