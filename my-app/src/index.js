@@ -1,40 +1,40 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Gallery from './Gallery';
+import Gallery from './components/Gallery';
+import MyVideoPlayer from './components/myVideoPlayer';
+import Scoreboard from './components/scoreboard';
+import Basket from './components/basket';
+import FavoriteQuote from './components/favoriteQuote';
+import AgeGroup from './components/ageGroup';
+import Welcom from './components/welcom';
 
-//функциональный компонент(как стрелочная функция)
-//добавляем props для доступа к значениям передаваемым через атрибут в JSX
-const NameApp = (props) => {
-	//получаем доступ к атрубуту name - props.name
-	const name = props.name;
-	const location = props.location;
-	const passed = props.passed;
 
-	return (
-		<div>
-			<h1>Hello, {name}</h1>
-			<p>Your current location is: {location}</p>
-			<p>Has a diploma: {String(passed)}</p>
-		</div>
-	);
-}
-
-const graduated = true;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<React.StrictMode>
-		<App />
-		{/* отображение функционального компонента <NameApp /> */}
-		{/* передаем атрибут name в JSX*/}
-		<NameApp name="Sarah Smith" location="LA, California" passed={graduated} />
+		<Welcom />
+		< MyVideoPlayer
+			title="The Matrices: A Review"
+			author="ChrisReviews"
+			thumbnail="https://mimo.app/i/chris.png"
+			datePublished="04/09/2022"
+			views={142930}
+		/>
+		< Scoreboard />
+		<Basket />
+		<FavoriteQuote />
+		<AgeGroup />
 		<Gallery />
+
 	</React.StrictMode>
+
 );
 
 reportWebVitals();
 
 //npm start - запуск-----------
+
+

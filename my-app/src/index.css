@@ -162,8 +162,74 @@ h6 {
 	line-height: 150%;
 }
 
+.subtitle {
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 130%;
+}
+
 .text {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 130%;
+}
+
+input {
+	padding: 2px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+	transition: background-color 0.2s linear;
+	background-color: #06bcb3;
+	border-radius: 4px;
+
+}
+
+/*----myVideoPlayer-------------------------------------*/
+.myVideoPlayer {
+	margin: 50px 0;
+	text-align: center;
+
+}
+
+h2 {
+	margin-bottom: 8px;
+}
+
+div.previewWindow {
+	background-color: black;
+	box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2);
+	width: 500px;
+	height: 200px;
+	position: relative;
+	overflow: hidden;
+	margin: 0 auto;
+
+}
+
+div.previewWindow img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 400px;
+}
+
+div.previewWindow img.play {
+	width: 40px;
+	height: 40px;
+	background-color: white;
+	border-radius: 20px;
+}
+
+h4,
+p {
+	margin-top: 0px;
+	margin-bottom: 4px;
+}
+
+/*----form-------------------------------------*/
+
+.form{
+	margin: 50px 0 500px 0;
+padding: 50px;
+border: 1px solid #048280;
 }
