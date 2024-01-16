@@ -19,10 +19,13 @@ export default class Scoreboard extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<h3> Score: {this.state.score} </h3>
-				<p> {this.state.hint} </p>
-			</div>
+				<div className="scoreboard _block">
+					<div className="scoreboard__container _container">
+						<h2 className="scoreboard__subtitle subtitle"> Scoreboard</h2>
+						<h3> Score: {this.state.score} </h3>
+						<p> {this.state.hint} </p>
+					</div>
+				</div>
 		);
 	}
 }

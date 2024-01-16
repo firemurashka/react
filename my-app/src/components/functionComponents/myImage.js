@@ -2,7 +2,7 @@ import React from "react";
 
 export const MyImage = (props) => {
 	return (
-		<img
+		<img className="myImage"
 			src={"https://mimo.app/i/" + props.name + ".png"}
 			alt={props.name}
 		/>
